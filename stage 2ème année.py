@@ -35,7 +35,7 @@ def get_data_from_elastic():
     # Keep response in a list.
     result = list(rel)
     temp = []
-    # We need only '_source' and '_id', which has all the fields required.
+    # We need only '_id', which has all the fields required.
     # This elimantes the elasticsearch metdata like _id, _type, _index.
     for hit in result:
         temp.append(hit['_id'])
